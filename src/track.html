@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FinanTrends</title>
+    <link rel="stylesheet" href="css/track.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="icon" type="images/YURI.png" href="images/grafico-de-crescimento.png" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="Login.html">
+        <i class="fa-solid fa-coins" style="margin-right: 10px"></i>
+        <h3>Login</h3>
+      </a>
+
+      <nav>
+        <div class="mobile-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+          <div class="line4"></div>
+        </div>
+        <ul class="nav-list">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Cotações</a></li>
+          <li><a href="#noticias">Notícias</a></li>
+          <li><a href="#conversor">Conversor</a></li>
+          <i class="fa-solid fa-sun" style="display: flex" id="mode"></i>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <div class="acompanhe">
+        <h4>Acompanhe as tendêcias Financeiras em tempo real</h4>
+      </div>
+
+      <section id="cotacoes">
+        <div class="card container">
+          <div style="display: flex">
+            <i class="fa-solid fa-dollar-sign" style="display: flex"></i>
+            <h5 class="card-tittle">Cotações</h5>
+          </div>
+          <div class="grid">
+            <p>USD</p>
+            <p>EUR</p>
+            <p>BTC</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="noticias">
+        <div class="card container">
+          <h5 class="section-title">
+            <i class="fa-solid fa-newspaper"></i> Últimas Notícias
+          </h5>
+          <div class="grid-noticias">
+            <img
+              src="images/mercado-financeiro.png"
+              width="200px"
+              height="100px"
+            />
+            <h5>
+              Dólar fecha em queda com expectativas sobre corte de juros nos EUA
+            </h5>
+          </div>
+          <div class="grid-noticias">
+            <img
+              src="images/grafico-de-crescimento.png"
+              width="200px"
+              height="100px"
+            />
+            <h5>Bitcoin volta a subir após semana de queda acentuada</h5>
+          </div>
+        </div>
+      </section>
+
+      <section id="conversor">
+        <div class="card container">
+          <h5 class="section-title">
+            <i class="fa-solid fa-coins"></i> Conversor de Moedas
+          </h5>
+          <div class="conversor-container">
+            <div class="form-group">
+              <label for="valor">Valor (R$):</label>
+              <input
+                type="number"
+                id="valor"
+                class="form-control"
+                placeholder="Digite o valor em reais"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="moeda">Converter para:</label>
+              <select id="moeda" class="form-select">
+                <option value="USD">Dólar</option>
+                <option value="EUR">Euro</option>
+                <option value="BTC">Bitcoin</option>
+              </select>
+            </div>
+
+            <button class="btn btn-success mt-2" onclick="converterMoeda()">
+              Converter
+            </button>
+            <button class="btn btn-danger mt-2" onclick="limparConversao()">
+              Limpar
+            </button>
+
+            <div id="resultado" class="mt-3 text-primary fw-bold"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/track.js"></script>
+    <script src="js/header.js"></script>
+  </body>
+</html>
